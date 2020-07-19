@@ -10,7 +10,7 @@ class App extends React.Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "26tPplGWjN0xLybiU"
+      selectedGifId: "xT9IgDEI1iZyb2wqo8"
     };
   }
 
@@ -27,6 +27,12 @@ class App extends React.Component {
     });
   }
 
+  selectGif = (id) => {
+    this.setState({
+      selectedGifId: id
+    });
+  }
+
   render() {
     return (
       <div>
@@ -37,7 +43,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs} />
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );
