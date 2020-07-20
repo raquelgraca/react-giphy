@@ -1,14 +1,10 @@
 import React from "react";
 
 
-const ButtonFilter = () => {
-
-    handleCLick = (event) => {
-        this.props.open(event.target.value);
-      }
+const ButtonFilter = ({ toggleOpen }) => {
 
     return (
-        <button className="btn" onClick={this.handleCLick}>
+        <button className="btn" onClick={() => toggleOpen()}>
         <i class="fas fa-filter"> Filter</i>
         </button>
     )

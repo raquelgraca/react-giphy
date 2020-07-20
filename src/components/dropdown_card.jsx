@@ -1,13 +1,16 @@
 import React from "react";
 
-const DropdownCard = ({ setOpen }) => {
+const DropdownCard = ({ open }) => {
 
     const filters = require("../filters.json");
+    
+    if (!open) { return "" }; 
+
     return (
         <div className="dropdownCard">
             <label className="filterList">
             {filters.saved_filters.map((filter) => (
-                <option key={filter.id} className="liDropdown" onClick={() => setOpen(false)}>
+                <option key={filter.id} className="liDropdown">
                 {filter.category}
                 </option>
             ))}

@@ -12,7 +12,7 @@ class ButtonWithDd extends React.Component {
         };
     }
     
-    open = () => {
+    toggleOpen = () => {
         this.setState({
         open: !this.state.open
         });
@@ -21,8 +21,8 @@ class ButtonWithDd extends React.Component {
     render() {
         return (
         <div>
-          <ButtonFilter open={this.open} />
-          <DropdownCard setOpen={setOpen} />
+          <ButtonFilter toggleOpen={this.toggleOpen} />
+          <DropdownCard open={this.state.open}/>
         </div>
       );
     }
