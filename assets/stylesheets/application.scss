@@ -61,3 +61,29 @@
     }
   }
 }
+// button_filter
+.btn {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+} 
+.btn:hover {
+    background-color: darkgray;
+    color:white;
+}
+//dropdown_card
+.liDropdown{
+  padding: 15px;
+  color: gray;
+    :hover {
+      background-color: lightness($color: gray);
+      color: white;
+      cursor: pointer;
+    }
+}
+.filterList {
+  list-style: none;
+  text-decoration: none;
+}
