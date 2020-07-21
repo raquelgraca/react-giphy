@@ -21,9 +21,13 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.s?css$/,
-        exclude: /node_modules/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        test: /\.scss$/,
+        include: paths.appSrc,
+        loaders: [
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
+          require.resolve('sass-loader')
+        ]
       },
       {
         test: /\.html$/,
