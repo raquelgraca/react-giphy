@@ -5,7 +5,7 @@ const ButtonFilter = ({ toggleOpen }) => {
 
     return (
         <button className="btn" onClick={() => toggleOpen()}>
-        <i class="fas fa-filter"> Filter</i>
+            Filter
         </button>
     )
 };

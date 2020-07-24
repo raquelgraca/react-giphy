@@ -6,7 +6,7 @@ import GifList from './gif_list';
 import SavedFilter from './saved_filter';
 import ButtonFilter from './button_filter';
 import DropdownCard from './dropdown_card';
-import ButtonWithDd from './button_dp';
+// import ButtonWithDd from './button_dp';
 
 
 class App extends React.Component {
@@ -15,7 +15,8 @@ class App extends React.Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "xT9IgDEI1iZyb2wqo8"
+      selectedGifId: "xT9IgDEI1iZyb2wqo8",
+      open: false
     };
   }
 
@@ -38,13 +39,22 @@ class App extends React.Component {
     });
   }
 
+  toggleOpen = () => {
+    this.setState({
+    open: !this.state.open
+    });
+  }
+
   render() {
     return (
       <div>
         <div className="left-scene">
           <SearchBar search={this.search} />
-          <SavedFilter />
-          <ButtonWithDd />
+          <div className="filterContainer">
+            <SavedFilter />
+            <ButtonFilter toggleOpen={this.toggleOpen} />
+          </div>
+          <DropdownCard open={this.state.open} />
           <div className="selected-gif">
             <Gif id={this.state.selectedGifId} />
           </div>

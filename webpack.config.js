@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: paths.appSrc,
+        include: path.appSrc,
         loaders: [
           require.resolve('style-loader'),
           require.resolve('css-loader'),

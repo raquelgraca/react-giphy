@@ -10,7 +10,7 @@ const DropdownCard = ({ open }) => {
         <div className="dropdownCard">
             <label className="filterList">
             {filters.saved_filters.map((filter) => (
-                <option key={filter.id} className="liDropdown">
+                <option key={filter.id} >
                 {filter.category}
                 </option>
             ))}

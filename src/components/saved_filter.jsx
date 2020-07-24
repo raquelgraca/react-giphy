@@ -16,19 +16,17 @@ class SavedFilter extends React.Component {
   render() {
     const filters = require("../filters.json");
     return (
-      <div>
-        <form>
+        <form className="savedFilter">
           <label>
             <select onChange={this.handleChange}>
               {filters.saved_filters.map(filter =>(
-                <option key={filter.id} value={filter.category}>
+                <option key={filter.id} value={filter.category} className="liDropdown">
                   {filter.category}
                 </option>
               ))}
             </select>        
           </label>
         </form>
-      </div>
     );
   }
 }
